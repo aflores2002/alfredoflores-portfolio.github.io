@@ -173,7 +173,8 @@ nav ul li a:hover::after {
 }
 .work img{
   width: 350px;
-  height: 325px;
+  height: 200px;
+  zoom: 200%;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -304,7 +305,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
   #header{
-    background-image: url(images/phone-background.png);
+    background-image: url(images/sanDiego.jpeg);
   }
   .header-text{
     margin-top: 100%;
