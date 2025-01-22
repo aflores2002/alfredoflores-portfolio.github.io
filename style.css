@@ -15,7 +15,6 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url(images/sanDiego.jpeg);
-
   background-size: cover;
   background-position: center;
 }
@@ -26,8 +25,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));;
-
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 .container {
   padding: 10px 10%;
@@ -144,11 +142,12 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .tab-contents ul li span {
-  color: #b54769;
-  font-size: 14px;
+  color: #ff004f;
+  font-size: 15px;
+  font-weight: 500;
 }
 .tab-contents {
   display: none;
@@ -156,6 +155,26 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
   display: block;
 }
+
+/* Add styles for nested experience details */
+.experience-details {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #ababab;
+}
+
+.experience-details li {
+  margin: 5px 0;
+  position: relative;
+}
+
+.experience-details li:before {
+  content: "•";
+  color: #ff004f;
+  position: absolute;
+  left: -15px;
+}
+
 /*----------portfolio----------*/
 #portfolio{
   padding: 50px 0;
@@ -233,6 +252,7 @@ nav ul li a:hover::after {
 .btn:hover{
   background: #ff004f;
 }
+
 /* ----------contact---------- */
 .contact-left{
   flex-basis: 35%;
@@ -282,7 +302,7 @@ form input, form textarea{
   border-radius: 6px;
 }
 form .btn2{
-  padding: 14px, 60px;
+  padding: 14px 60px;
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
@@ -298,6 +318,7 @@ form .btn2{
 .copyright i{
   color: #ff004f;
 }
+
 /* ---------- css for small screens ---------- */
 nav .fa-solid{
   display: none;
@@ -363,4 +384,10 @@ nav .fa-solid{
   color: #61b752;
   margin-top: -40px;
   display: block;
+}
+
+/* Add emphasis to current role */
+.tab-contents ul li span.current-role {
+  color: #ff004f;
+  font-weight: 600;
 }
