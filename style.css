@@ -6,11 +6,19 @@
 }
 html{
   scroll-behavior: smooth;
+  /* UPDATED: Set base font size for rem units. 1rem = 10px */
+  font-size: 10px;
 }
 body {
   background: #080808;
   color: #fff;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #header {
   width: 100%;
   height: 100vh;
@@ -39,7 +47,9 @@ nav {
 }
 
 .logo {
+  /* UPDATED: Use max-width for flexibility. It will be 200px wide unless the screen is too small. */
   width: 200px;
+  max-width: 40%;
 }
 
 nav ul li {
@@ -51,7 +61,8 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  /* UPDATED: px to rem */
+  font-size: 1.8rem;
   position: relative;
 }
 nav ul li a::after {
@@ -71,12 +82,14 @@ nav ul li a:hover::after {
   position: relative;
   color: #fff;
   margin-top: 20%;
-  font-size: 30px;
+  /* UPDATED: px to rem */
+  font-size: 3rem;
 }
 .header-text h1 {
   position: relative;
   color: #fff;
-  font-size: 60px;
+  /* UPDATED: px to rem */
+  font-size: 6rem;
   margin-top: 20px;
 }
 /*----------about----------*/
@@ -86,7 +99,6 @@ nav ul li a:hover::after {
 }
 .headshot{
   width: 100%;
-  height: 100%;
   border-radius: 15px;
   display: block;
   mask-image: linear-gradient(to bottom, rgba(1, 1, 1, 1), transparent);
@@ -109,7 +121,8 @@ nav ul li a:hover::after {
 }
 
 .sub-title {
-  font-size: 60px;
+  /* UPDATED: px to rem */
+  font-size: 6rem;
   font-weight: 600;
   color: #fff;
 }
@@ -120,7 +133,8 @@ nav ul li a:hover::after {
 }
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
+  /* UPDATED: px to rem */
+  font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -143,10 +157,13 @@ nav ul li a:hover::after {
 .tab-contents ul li {
   list-style: none;
   margin: 15px 0;
+  /* UPDATED: Added a base font size for experience list items */
+  font-size: 1.6rem;
 }
 .tab-contents ul li span {
   color: #ff004f;
-  font-size: 15px;
+  /* UPDATED: px to rem */
+  font-size: 1.5rem;
   font-weight: 500;
 }
 .tab-contents {
@@ -154,25 +171,6 @@ nav ul li a:hover::after {
 }
 .tab-contents.active-tab {
   display: block;
-}
-
-/* Add styles for nested experience details */
-.experience-details {
-  margin-left: 20px;
-  font-size: 14px;
-  color: #ababab;
-}
-
-.experience-details li {
-  margin: 5px 0;
-  position: relative;
-}
-
-.experience-details li:before {
-  content: "•";
-  color: #ff004f;
-  position: absolute;
-  left: -15px;
 }
 
 /*----------portfolio----------*/
@@ -191,9 +189,9 @@ nav ul li a:hover::after {
   overflow: hidden;
 }
 .work img{
-  width: 350px;
-  height: 200px;
-  zoom: 200%;
+  /* UPDATED: Make images responsive */
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
@@ -213,7 +211,8 @@ nav ul li a:hover::after {
   flex-direction: column;
   padding: 0 40px;
   text-align: center;
-  font-size: 14px;
+  /* UPDATED: px to rem */
+  font-size: 1.4rem;
   transition: height 0.5s;
 }
 .layer h3{
@@ -224,7 +223,8 @@ nav ul li a:hover::after {
   margin-top: 20px;
   color: #ff004f;
   text-decoration: none;
-  font-size: 18px;
+  /* UPDATED: px to rem */
+  font-size: 1.8rem;
   line-height: 60px;
   background: #fff;
   width: 60px;
@@ -262,18 +262,22 @@ nav ul li a:hover::after {
 }
 .contact-left p{
   margin-top: 30px;
+  /* UPDATED: Added font-size */
+  font-size: 1.6rem;
 }
 .contact-left p i{
   color: #ff004f;
   margin-right: 15px;
-  font-size: 25px;
+  /* UPDATED: px to rem */
+  font-size: 2.5rem;
 }
 .social-icons{
   margin-top: 30px;
 }
 .social-icons a{
   text-decoration: none;
-  font-size: 30px;
+  /* UPDATED: px to rem */
+  font-size: 3rem;
   margin-right: 15px;
   color: #ababab;
   display: inline-block;
@@ -298,12 +302,14 @@ form input, form textarea{
   padding: 15px;
   margin: 15px 0;
   color: #fff;
-  font-size: 18px;
+  /* UPDATED: px to rem */
+  font-size: 1.8rem;
   border-radius: 6px;
 }
 form .btn2{
   padding: 14px 60px;
-  font-size: 18px;
+  /* UPDATED: px to rem */
+  font-size: 1.8rem;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -314,30 +320,56 @@ form .btn2{
   background: #262626;
   font-weight: 300;
   margin-top: 20px;
+  /* UPDATED: Added font-size */
+  font-size: 1.4rem;
 }
 .copyright i{
   color: #ff004f;
 }
 
-/* ---------- css for small screens ---------- */
+/* ---------- RESPONSIVE DESIGN STYLES ---------- */
 nav .fa-solid{
   display: none;
 }
 
+/* UPDATED: Added a breakpoint for tablets and medium screens */
+@media only screen and (max-width: 1024px){
+  .header-text h1{
+    font-size: 4.5rem;
+  }
+  .sub-title{
+    font-size: 5rem;
+  }
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%; /* Stack columns on tablets */
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+}
+
+
+/* UPDATED: Kept original breakpoint for small mobile screens */
 @media only screen and (max-width: 600px){
   #header{
     background-image: url(images/sanDiego.jpeg);
   }
   .header-text{
     margin-top: 100%;
-    font-size: 16px;
+    /* UPDATED: px to rem */
+    font-size: 1.6rem;
   }
   .header-text h1{
-    font-size: 30px;
+    /* UPDATED: px to rem */
+    font-size: 3rem;
   }
   nav .fa-solid{
     display: block;
-    font-size: 25px;
+    /* UPDATED: px to rem */
+    font-size: 2.5rem;
   }
   nav ul{
     background: #ff004f;
@@ -361,33 +393,21 @@ nav .fa-solid{
     cursor: pointer;
   }
   .sub-title{
-    font-size: 40px;
-  }
-  .about-col-1, .about-col-2{
-    flex-basis: 100%;
-  }
-  .about-col-1{
-    margin-bottom: 30px;
+    /* UPDATED: px to rem */
+    font-size: 4rem;
   }
   .tab-links{
-    font-size: 16px;
+    /* UPDATED: px to rem */
+    font-size: 1.6rem;
     margin-right: 20px;
   }
-  .contact-left, .contact-right{
-    flex-basis: 100%;
-  }
   .copyright{
-    font-size: 14px;
+    /* UPDATED: px to rem */
+    font-size: 1.4rem;
   }
 }
 #msg{
   color: #61b752;
   margin-top: -40px;
   display: block;
-}
-
-/* Add emphasis to current role */
-.tab-contents ul li span.current-role {
-  color: #ff004f;
-  font-weight: 600;
 }
